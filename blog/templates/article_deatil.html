@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+
+{%block content%}
+<h1>{{article.title}}</h1>
+<p>
+{{article.body}}
+</p>
+<p>
+{{article.support}}
+</p>
+<p>
+{{article.comment}}
+</p>
+<p><a href = "{%url 'blog:articles' %}"> Return to the main page</p>
+{%endblock%}       

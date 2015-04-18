@@ -1,0 +1,13 @@
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if article %}
+    <p>Found {{ article|length }} article{{ article|pluralize }}.</p>
+    <ul>
+        {% for article in article %}
+        <h1>{{ article.title }}</h1>
+        <p>{{article.body}}</p>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No article matched your search criteria.</p>
+{% endif %}

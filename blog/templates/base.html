@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+{%load staticfiles%}
+<link rel = "stylesheet" type = "text/css" href = "{% static 'blog/style.css'%}"/>
+<div id = head>
+<titile>My basic blog!</title></div>
+</head>
+<body>
+	<div id = "page">
+	<form class = "search" method = "get" action = "/blog/search/">
+	<input type = "text" name = "search"></input>
+	<input type = "submit" value = "Go"></input>
+	<input type = "hidden" value = "yes" name = "check_keywords"></input>
+	<input type = "hidden" value = "default" name = "area"></input>
+	</form>
+	<div id = "sidebar">
+	{%block sidebar%}{%endblock%}
+	</div>	
+	<div id = "article">
+	{%block content%}{%endblock%}	
+	</div>
+	</div>
+</body>

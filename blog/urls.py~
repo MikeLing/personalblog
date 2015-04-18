@@ -1,0 +1,9 @@
+from django.conf.urls import url
+from . import views
+#urlpatterns = patterns('',url(r'^all/$','article.views.articles'),
+#			url(r'^get/(?P<article_id>\d+)/$','article.views.article'),
+#)
+
+urlpatterns = [url(r'^$',views.articles,name = 'articles'),
+	url(r'^/article/(?P<article_id>\d+)/$',views.article,name = 'article_deatil'),
+]

@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+{%block content%}
+<form action = 'search_action.py'>
+</form>
+{%if articles.count > 0%}
+{%for article in articles%}
+<a href = "{%url 'blog:article_deatil' article.id%}"><h1>{{article.title}}</h1></a>
+<p>
+{{article.body}}
+</p>
+<p>
+{{article.support}}
+</p>
+{%endfor%}
+{%endif%}
+
+{% endblock %}

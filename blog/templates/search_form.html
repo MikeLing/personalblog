@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Search</title>
+</head>
+<body>
+{% if errors %}
+{%for erros in errors%}
+        <p style="color: red;">{{erros}}</p>
+{%endfor%}
+{% endif %}
+<form class = "search" method = "get" action = "/blog/search/">
+	<input type = "text" name = "search"></input>
+	<input type = "submit" value = "Go"></input>
+	<input type = "hidden" value = "yes" name = "check_keywords"></input>
+	<input type = "hidden" value = "default" name = "area"></input>
+	</form>
+</body>
+</html>
